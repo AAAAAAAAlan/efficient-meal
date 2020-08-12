@@ -1,65 +1,37 @@
-<template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        efficent-meal
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .container
+    h1 Кафе и рестораны.
+    Sorting.sorting
+    CafeCard.cafe-card(:cafe="cafe")
+    
 </template>
 
 <script>
-export default {}
+import Sorting from '~/components/Sorting.vue'
+import CafeCard from '~/components/CafeCard/CafeCard.vue'
+
+export default {
+  components: {
+    Sorting,
+    CafeCard,
+  },
+  data() {
+    return {
+      cafe: {
+        image:
+          'https://icons.iconarchive.com/icons/aha-soft/iron-man/64/Ironman-Mask-3-Old-icon.png',
+        name: 'Mcdonalds',
+        efficentMeals: '11',
+        rating: '4,5',
+      },
+    }
+  },
+}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style lang="stylus" scoped>
+.container
+  margin-top 40px
+  h1
+    font-size 24px
 </style>

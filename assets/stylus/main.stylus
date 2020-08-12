@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap')
+@import 'normalize.stylus'
+@import 'reset.stylus'
+@import 'typography.stylus'
+
+*
+  box-sizing border-box
+  
+body
+  font-family 'Ubuntu', sans-serif
+
+.container
+  width 100%
+  max-width 620px
+  margin 0 auto
+
+
+// Variables
+
+$black = #000000
+$grey = #F5F5F7
