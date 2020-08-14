@@ -19,4 +19,5 @@ export default {
   height 64px
   background-color #FFFFFF
   border-radius 12px
+  background-size 64px
 </style>

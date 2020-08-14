@@ -5,10 +5,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      filters: ['Все', 'Свежие', 'Высокооценённые', 'Популярные'],
-    }
+  props: {
+    filters: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>

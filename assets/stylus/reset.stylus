@@ -64,6 +64,9 @@ hr
 input, select
 	vertical-align middle
 	outline-offset 0
+	border none
+	outline none
+	user-select none
 
 button
 	border 0

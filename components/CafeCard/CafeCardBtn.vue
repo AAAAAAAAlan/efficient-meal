@@ -1,9 +1,16 @@
 <template lang="pug">
-  button Меню
-</template>
+  button(@click="$router.push('/' + name)") Меню
+  </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+  },
+}
 </script>
 
 <style lang="stylus" scoped>

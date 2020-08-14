@@ -7,7 +7,7 @@
     .cafe-rating
       svg-icon(name="rating" style="width: 16px; height: 16px")
       p {{ cafe.rating }}
-    CafeCardBtn.btn
+    CafeCardBtn.btn(:name="cafe.name")
 </template>
 
 <script>
@@ -37,7 +37,7 @@ export default {
   border-radius 14px
   align-items center
   justify-content space-between
-  padding 0 8px
+  padding 0 24px 0 8px
   .cafe-info
     width 100%
     max-width 200px

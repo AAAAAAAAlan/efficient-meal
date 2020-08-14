@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     h1 Кафе и рестораны.
-    Sorting.sorting
+    Sorting.sorting(:filters="['Все', 'Свежие', 'Высокооценённые', 'Популярные']")
     CafeCard.cafe-card(:cafe="cafe")
     
 </template>
@@ -18,8 +18,7 @@ export default {
   data() {
     return {
       cafe: {
-        image:
-          'https://icons.iconarchive.com/icons/aha-soft/iron-man/64/Ironman-Mask-3-Old-icon.png',
+        image: 'https://i.imgur.com/vM4ivzf.png',
         name: 'Mcdonalds',
         efficentMeals: '11',
         rating: '4,5',
