@@ -6,8 +6,8 @@
         strong {{ product.name }}
       p {{ product.price }}
       p
-        i {{ `Коэффициент сытности: ${product.efficency.toFixed(2)}` }} 
-        //- >= 6 => Очень сытно / >= 3 => Сытно / <= 3 => Возможно вкусно, но не выгодно!
+        i {{ efficiency }} 
+        //- >= 6 => Очень выгодно / >= 3 => Выгодно / <= 3 => Возможно вкусно, но не выгодно!
 </template>
 
 <script>
@@ -16,6 +16,18 @@ export default {
     product: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    efficiency() {
+      if (this.product.efficiency >= 6) {
+        return 'Очень выгодно'
+      } else if (this.product.efficiency >= 3) {
+        return 'Довольно выгодно'
+      } else if (this.product.efficiency < 3) {
+        return 'Возможно вкусно, но не выгодно!'
+      }
+      return null
     },
   },
 }

@@ -1,5 +1,3 @@
 <template lang="pug">
-    Nuxt
+  Nuxt
 </template>
-
-<style lang="stylus" scoped></style>

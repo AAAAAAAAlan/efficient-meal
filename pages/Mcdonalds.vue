@@ -1,10 +1,12 @@
 <template lang="pug">
-  .container
-    h1 {{ $route.name }}
-    Searchbar
-    ProductFilter
-    .products
-      ProductCard( v-for="(product, index) in searchedProducts" :key="index" :product="product" )
+  div
+    .container
+      h1 {{ $route.name }}
+      Searchbar
+      ProductFilter
+      .products
+        ProductCard( v-for="(product, index) in searchedProducts" :key="index" :product="product" )
+    FooterSlim
 </template>
 
 <script>
@@ -13,12 +15,14 @@ import { mapState } from 'vuex'
 import Searchbar from '@/components/Searchbar.vue'
 import ProductCard from '@/components/ProductCard.vue'
 import ProductFilter from '@/components/ProductFilter.vue'
+import FooterSlim from '@/components/FooterSlim.vue'
 
 export default {
   components: {
     Searchbar,
     ProductCard,
     ProductFilter,
+    FooterSlim,
   },
   async asyncData({ app, params }) {
     const products = await app.$axios.get('http://localhost:4000/')
@@ -32,7 +36,7 @@ export default {
     filteredProducts() {
       const arr = [...this.products]
       if (this.selectedFilter.name === 'эффективный') {
-        return arr.sort((a, b) => b.efficency - a.efficency) // ПОМЕНЯТЬ СЛОВО НА БЭКЕ И НА ФРОНТЕ
+        return arr.sort((a, b) => b.efficiency - a.efficiency)
       } else if (this.selectedFilter.name === 'дорогой') {
         return arr.sort(
           (a, b) =>
@@ -65,4 +69,6 @@ export default {
     display grid
     grid-template-columns repeat(2, auto)
     gap 24px
+    &:last-child
+      margin-bottom 100px
 </style>

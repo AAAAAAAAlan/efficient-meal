@@ -1,17 +1,20 @@
 <template lang="pug">
-  .container
-    h1 Кафе и рестораны.
-    Sorting.sorting(:filters="['Все', 'Свежие', 'Высокооценённые', 'Популярные']")
-    CafeCard.cafe-card(:cafe="cafe")
-    
+  div
+    .container
+      h1 Кафе и рестораны.
+      Sorting.sorting(:filters="['Все', 'Свежие', 'Высокооценённые', 'Популярные']")
+      CafeCard.cafe-card(:cafe="cafe")
+    Footer.footer
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue'
 import Sorting from '~/components/Sorting.vue'
 import CafeCard from '~/components/CafeCard/CafeCard.vue'
 
 export default {
   components: {
+    Footer,
     Sorting,
     CafeCard,
   },
@@ -20,7 +23,7 @@ export default {
       cafe: {
         image: 'https://i.imgur.com/vM4ivzf.png',
         name: 'Mcdonalds',
-        efficentMeals: '11',
+        efficentMeals: '21',
         rating: '4,5',
       },
     }
