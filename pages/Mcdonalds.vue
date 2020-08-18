@@ -25,7 +25,9 @@ export default {
     FooterSlim,
   },
   async asyncData({ app, params }) {
-    const products = await app.$axios.get('http://localhost:4000/')
+    const products = await app.$axios.get(
+      'https://fast-citadel-65021.herokuapp.com/'
+    )
     return { products: products.data }
   },
   computed: {
