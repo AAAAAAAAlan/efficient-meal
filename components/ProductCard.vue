@@ -7,7 +7,6 @@
       p {{ product.price }}
       p
         i {{ efficiency }} 
-        //- >= 6 => Очень выгодно / >= 3 => Выгодно / <= 3 => Возможно вкусно, но не выгодно!
 </template>
 
 <script>
@@ -36,6 +35,8 @@ export default {
 <style lang="stylus" scoped>
 .product-card
   height: 95px
+  // max-width 298px
+  width 300px
   background  #F5F5F7
   border-radius 14px
   display flex

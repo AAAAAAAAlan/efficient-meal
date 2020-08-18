@@ -19,4 +19,7 @@ button
   height 40px
   background #000000
   border-radius 8px
+  transition 0.3s
+  &:active
+    border-radius 1px
 </style>

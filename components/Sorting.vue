@@ -23,8 +23,10 @@ export default {
     color $black
     opacity 0.3
     cursor pointer
-    &:first-child
-      opacity 1
     &:hover
       opacity 1
+
+@media (max-width: 600px)
+  .sorting
+    display none
 </style>

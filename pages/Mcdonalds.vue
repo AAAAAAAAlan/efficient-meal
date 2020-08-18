@@ -1,7 +1,10 @@
 <template lang="pug">
   div
     .container
-      h1 {{ $route.name }}
+      .header
+        a(@click="$router.push('/')")
+          svg-icon(name="arrow" style="width: 21px; height: 21px; cursor: pointer")
+        h1 {{ $route.name }}
       Searchbar
       ProductFilter
       .products
@@ -63,9 +66,17 @@ export default {
 
 <style lang="stylus" scoped>
 .container
-  h1
+  .header
     margin-top 40px
-    font-size 24px
+    display flex
+    align-items center
+    a
+      &:active
+        transition transform 0.3s
+        transform translate(-10px, 0)
+    h1
+      font-size 24px
+      padding-left 10px
   .products
     margin-top 24px
     display grid
@@ -73,4 +84,14 @@ export default {
     gap 24px
     &:last-child
       margin-bottom 100px
+
+@media (max-width: 600px)
+  .container
+    padding 5px
+    h1
+      margin-top 10px
+    .products
+      grid-template-columns repeat(1, auto)
+      justify-items center
+      align-items center
 </style>

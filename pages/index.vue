@@ -36,4 +36,8 @@ export default {
   margin-top 40px
   h1
     font-size 24px
+
+@media (max-width: 600px)
+  .container
+    padding 5px
 </style>

@@ -48,4 +48,11 @@ export default {
     padding-left 100px
     p
       padding-left 2px
+
+@media (max-width: 600px)
+  .cafe-card
+    .logo
+      display none
+    .cafe-rating
+      display none
 </style>

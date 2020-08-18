@@ -42,4 +42,8 @@ export default {
 .active
   text-decoration underline
   opacity 1 !important
+
+@media (max-width: 600px)
+  .product-filter
+    display block
 </style>
