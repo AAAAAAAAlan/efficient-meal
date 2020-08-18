@@ -39,5 +39,6 @@ export default {
 
 @media (max-width: 600px)
   .container
+    margin-top 10px
     padding 5px
 </style>

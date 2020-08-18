@@ -88,7 +88,7 @@ export default {
 @media (max-width: 600px)
   .container
     padding 5px
-    h1
+    .header
       margin-top 10px
     .products
       grid-template-columns repeat(1, auto)
