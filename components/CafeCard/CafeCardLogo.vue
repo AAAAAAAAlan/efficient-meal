@@ -16,6 +16,7 @@ export default {
 <style lang="stylus" scoped>
 .logo
   width 64px
+  min-width 64px
   height 64px
   background-color #FFFFFF
   border-radius 12px

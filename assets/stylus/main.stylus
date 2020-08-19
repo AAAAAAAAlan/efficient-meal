@@ -8,6 +8,8 @@
   
 body
   font-family 'Ubuntu', sans-serif
+  &::-webkit-scrollbar
+    display none !important
 
 .container
   width 100%

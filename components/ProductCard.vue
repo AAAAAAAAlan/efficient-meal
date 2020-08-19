@@ -35,7 +35,6 @@ export default {
 <style lang="stylus" scoped>
 .product-card
   height: 95px
-  // max-width 298px
   width 300px
   background  #F5F5F7
   border-radius 14px
