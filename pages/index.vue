@@ -3,7 +3,7 @@
     .container
       h1 Кафе и рестораны.
       Sorting.sorting(:filters="['Все', 'Свежие', 'Высокооценённые', 'Популярные']")
-      CafeCard.cafe-card(:cafe="cafe")
+      CafeCard.cafe-card(v-for="(cafe, index) in cafes" :key="cafe.index" :cafe="cafe")
     Footer.footer
 </template>
 
@@ -20,12 +20,20 @@ export default {
   },
   data() {
     return {
-      cafe: {
-        image: 'https://i.imgur.com/vM4ivzf.png',
-        name: 'Mcdonalds',
-        efficentMeals: '21',
-        rating: '4,5',
-      },
+      cafes: [
+        {
+          image: 'https://i.imgur.com/vM4ivzf.png',
+          name: 'mcdonalds',
+          efficentMeals: '21',
+          rating: '4,5',
+        },
+        {
+          image: 'https://upload.wikimedia.org/wikipedia/ru/b/bf/KFC_logo.svg',
+          name: 'kfc',
+          efficentMeals: '4',
+          rating: '3.8',
+        },
+      ],
     }
   },
 }

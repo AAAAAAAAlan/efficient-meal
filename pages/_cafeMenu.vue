@@ -4,7 +4,7 @@
       .header
         a(@click="$router.push('/')")
           svg-icon(name="arrow" style="width: 21px; height: 21px; cursor: pointer")
-        h1 {{ $route.name }}
+        h1 {{ $route.params.cafeMenu.toUpperCase() }}
       Searchbar
       ProductFilter
       .products
@@ -29,7 +29,7 @@ export default {
   },
   async asyncData({ app, params }) {
     const products = await app.$axios.get(
-      'https://fast-citadel-65021.herokuapp.com/'
+      `https://fast-citadel-65021.herokuapp.com/${params.cafeMenu}`
     )
     return { products: products.data }
   },

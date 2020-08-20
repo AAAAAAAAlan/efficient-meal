@@ -2,7 +2,7 @@
   .cafe-card
     CafeCardLogo.logo(:image="cafe.image")
     .cafe-info
-      h3 {{ cafe.name }}
+      h3 {{ cafe.name.toUpperCase() }}
       p {{ `${cafe.efficentMeals} эффективных позиций` }}
     .cafe-rating
       svg-icon(name="rating" style="width: 16px; height: 16px")
