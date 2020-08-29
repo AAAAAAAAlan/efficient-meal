@@ -33,6 +33,13 @@ export default {
           efficentMeals: '4',
           rating: '3.8',
         },
+        {
+          image:
+            'https://lh3.googleusercontent.com/PQeS3_IK93bJpSUlF0Scj5NMylgJcPgwb7Mio7iEIPjpl1jD4jFoql9dM2xuM5IRQ0c',
+          name: 'laolee',
+          efficentMeals: '8',
+          rating: '5',
+        },
       ],
     }
   },

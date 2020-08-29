@@ -21,4 +21,5 @@ export default {
   background-color #FFFFFF
   border-radius 12px
   background-size 64px
+  background-position center center
 </style>
