@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap')
 @import 'normalize.stylus'
 @import 'reset.stylus'
-@import 'typography.stylus'
+@import 'tooltip.stylus'
 
 *
   box-sizing border-box

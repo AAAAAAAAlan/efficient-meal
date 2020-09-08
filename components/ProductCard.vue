@@ -6,7 +6,7 @@
         strong {{ product.name }}
       p {{ product.price }}
       p
-        i {{ efficiency }} 
+        i( v-tooltip="`Коэффициент сытности: ${product.efficiency.toFixed(2)}`") {{ efficiency }} 
 </template>
 
 <script>
@@ -46,6 +46,7 @@ export default {
       padding 10px 0 0 10px
       &:nth-child(3)
         font-size 14px
+        cursor help
       &:nth-child(1)
         padding-top 0
 </style>
