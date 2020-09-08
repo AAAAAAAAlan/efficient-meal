@@ -6,7 +6,7 @@
         strong {{ product.name }}
       p {{ product.price }}
       p
-        i( v-tooltip="`Коэффициент сытности: ${product.efficiency.toFixed(2)}`") {{ efficiency }} 
+        i( @click="$router.push('/faq')" v-tooltip="`Коэффициент сытности: ${product.efficiency.toFixed(2)}`") {{ efficiency }} 
 </template>
 
 <script>
