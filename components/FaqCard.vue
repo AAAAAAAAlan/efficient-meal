@@ -4,7 +4,7 @@
       h1 Что такое коэффициент эффективности?
       p Я делю количество калорий в продукте на его цену и получаю коэффициент, по которому сравниваю каждый товар из меню. Чем выше коэффициент, тем выгоднее этот товар.
       nuxt-link.link(to="/")
-        btn Вернуться на главную.
+        .btn Вернуться на главную.
     .img
       <img src="https://img.icons8.com/ios/100/000000/bread-and-rye.png"/>
 
@@ -30,8 +30,8 @@
       margin-bottom 25px
     .link
       text-decoration none
-      btn
-        width 120px
+      .btn
+        width fit-content
         height 40px
         background #000000
         border-radius 8px

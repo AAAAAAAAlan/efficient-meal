@@ -24,23 +24,28 @@ export default {
         {
           image: 'https://i.imgur.com/vM4ivzf.png',
           name: 'mcdonalds',
-          efficentMeals: '21',
+          efficientMeals: '21',
           rating: '4,5',
         },
         {
           image: 'https://upload.wikimedia.org/wikipedia/ru/b/bf/KFC_logo.svg',
           name: 'kfc',
-          efficentMeals: '4',
+          efficientMeals: '4',
           rating: '3.8',
         },
         {
           image:
             'https://lh3.googleusercontent.com/PQeS3_IK93bJpSUlF0Scj5NMylgJcPgwb7Mio7iEIPjpl1jD4jFoql9dM2xuM5IRQ0c',
           name: 'laolee',
-          efficentMeals: '8',
+          efficientMeals: '8',
           rating: '5',
         },
       ],
+    }
+  },
+  head() {
+    return {
+      title: 'Efficient Meal',
     }
   },
 }

@@ -1,4 +1,4 @@
-# efficent-meal
+# efficient-meal
 [https://efficient-meal.vercel.app/](https://efficient-meal.vercel.app/)
 ![](https://i.imgur.com/8EX2y9u.png)
 ## Build Setup

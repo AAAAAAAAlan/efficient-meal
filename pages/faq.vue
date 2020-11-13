@@ -10,6 +10,11 @@ export default {
   components: {
     FaqCard,
   },
+  head() {
+    return {
+      title: 'FAQ',
+    }
+  },
 }
 </script>
 
